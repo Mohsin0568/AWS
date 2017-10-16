@@ -17,7 +17,7 @@ yum update
 
 ## Install Java8
 
-Can be skipped if Java8 is already installed. Check for Directory **java-1.8.0** at location **usr/share**. If **java-1.18.0** is already available then skip Java8 installation.
+This step can be skipped if Java8 is already installed. Check for Directory **java-1.8.0** at location **usr/share**. If **java-1.18.0** is already available then skip Java8 installation.
 
 ```
 yum install java-1.8.0
