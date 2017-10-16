@@ -1,12 +1,12 @@
 # Start Tomcat Server in AWS Linux EC2 Instance
 Steps to start Tomcat and Deploy Java Application
 
-Create EC2 Instance and assign below Security Groups:
+## Create EC2 Instance and assign below Security Groups:
 1) Custom TCP Rule with Port Range 8080
 2) SSH
 3) HTTP
 
-###Launch EC2 Instance and Run below Commands
+### Launch EC2 Instance and Run below Commands
 
 ## Check Yum Updates
 ```
