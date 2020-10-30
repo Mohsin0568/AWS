@@ -1,0 +1,23 @@
+runtime: java
+env: flex
+service: newsapp
+runtime_config:
+  jdk: openjdk8
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+
+#manual_scaling:
+  #instances: 1
+
+# Automatic Scaling
+automatic_scaling: 
+  min_num_instances: 2 
+  max_num_instances: 4 
+  cool_down_period_sec: 180 
+  cpu_utilization: 
+    target_utilization: 0.6
+resources:
+  cpu: 1
+  memory_gb: 3.75
+  disk_size_gb: 10
