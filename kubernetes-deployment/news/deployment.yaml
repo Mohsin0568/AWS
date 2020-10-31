@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+  labels:
+    app: kubectl-news
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kubectl-news
+      tier: kubectl-news-backend
+  template:
+    metadata:
+      labels:
+        app: kubectl-news
+        tier: kubectl-news-backend
+    spec:
+      containers:
+      - name: news
+        image: 306577524261.dkr.ecr.us-east-1.amazonaws.com/news:1.0
+        imagePullPolicy: Always
+        ports:
+          - name: http-server
+            containerPort: 8080
+        env:
+          - name: GCLOUD_PROJECT
+            value: computeproject-293903
